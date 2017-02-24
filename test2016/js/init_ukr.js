@@ -128,7 +128,7 @@ var advancedName=" поглиблений рівень";
 
 var textEnteredWordNumber="Кількість введених слів: ";
 var textPressDecreasePicture="Клацніть на малюнку для зменшення";
-var textPressIncreasePicture="Для збільшення зображення наведіть на нього курсор";
+var textPressIncreasePicture="Клацніть на малюнку для збільшення/зменшення";
 var textPassTask="Пропустити завдання";
 var textAcceptAnswer="Підтвердити відповідь";
 var textFinishTest="Завершити тест";

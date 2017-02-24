@@ -127,7 +127,7 @@ var advancedName=" углублённый уровень";
 
 var textEnteredWordNumber="Колличество введенных слов: ";
 var textPressDecreasePicture="Щелкните на картинке для уменьшения";
-var textPressIncreasePicture="Для увеличения изображения наведите на него курсор";
+var textPressIncreasePicture="Щелкните на картинке для увеличения/уменьшения";
 var textPassTask="Пропустить задание";
 var textAcceptAnswer="Подтвердить ответ";
 var textFinishTest="Завершить тест";
