@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Input} from "@angular/core/src/metadata/directives";
+import {TestEntity} from "../../entity/test-entity";
+import {TestReadService} from "../../service/test-read.service";
+
+
+
 
 @Component({
   selector: 'zno-test',
@@ -8,9 +13,20 @@ import {Input} from "@angular/core/src/metadata/directives";
 })
 export class ZnoTestComponent implements OnInit {
   @Input() testName: String;
-  constructor() { }
+  errorMessage: string;
+  test : TestEntity;
+  //mode = 'Observable';
+  constructor(private testReadService : TestReadService) { }
 
   ngOnInit() {
+    this.loadTest(this.testName);
+  }
+
+  loadTest(filePath : String)  {
+    this.testReadService.getTest(filePath)
+      .subscribe(
+        test => this.test = test[0],
+        error => this.errorMessage = <any> error);
   }
 
 }
