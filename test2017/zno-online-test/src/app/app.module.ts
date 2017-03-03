@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule, JsonpModule } from '@angular/http';
-
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ZnoTestComponent } from './zno-test/zno-test.component';
+import { ZnoTestComponent } from './component/zno-test/zno-test.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { ZnoTestComponent } from './zno-test/zno-test.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    JsonpModule
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,8 @@
-import { Component, ElementRef } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
+import { Component } from '@angular/core';
+import {ElementRef} from "@angular/core";
+
 @Component({
-  selector: 'zno-online-test',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -12,5 +11,4 @@ export class AppComponent {
   constructor(elm: ElementRef) {
     this.testName = elm.nativeElement.getAttribute('testName');
   }
-
 }

@@ -12,14 +12,14 @@ export class ZnoTestComponent implements OnInit {
   @Input() testName: String;
   errorMessage: string;
   test : TestEntity;
-  mode = 'Observable';
+  //mode = 'Observable';
   constructor(private testReadService : TestReadService) { }
 
   ngOnInit() {
     this.loadTest(this.testName);
   }
 
-  loadTest(filePath : String)  {
+ loadTest(filePath : String)  {
     this.testReadService.getTest(filePath)
       .subscribe(
         test => this.test = test[0],

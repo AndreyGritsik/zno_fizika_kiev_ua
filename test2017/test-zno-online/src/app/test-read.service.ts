@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Http, Response} from "@angular/http";
+import {Http, Response} from '@angular/http';
 import {TestEntity} from "./test-entity";
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
@@ -12,7 +12,8 @@ export class TestReadService {
   constructor( private http: Http) { }
 
   getTest(folderPath : String) : Observable<TestEntity[]> {
-    let testUrl = "assets/testInfo/{{folderPath}}/testDetails.json";
+    let testUrl = "app/testInfo/{{folderPath}}/testDetails.json";
+    console.info('testUrl={{testUrl}}');
     return this.http.get(testUrl)
         .map(this.extractData)
         .catch(this.handleError);
